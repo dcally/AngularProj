@@ -15,10 +15,8 @@ export class BooksService {
     constructor(private http: HttpClient) { }
 
     getBooks(): Observable<IBooks[]> {
-        return this.http.get<IBooks[]>(this.BooksData)
-            .pipe(
-                tap(data => console.log('All: ' + JSON.stringify(data)))
-            );
+        console.log(this.BooksData);
+        return this.http.get<IBooks[]>(this.BooksData);
     }
 
     // getBook(id: number): Observable<IBooks | undefined> {
