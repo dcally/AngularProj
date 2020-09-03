@@ -1,0 +1,18 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Way of Kings",
+      "bookSeries": "Stormlight Archive",
+      "releaseDate": "March 19, 2010",
+      "wordCount": 100000,
+      "coverURL": "src/assets/images/TheWayOfKings.jpeg"
+    },
+    {
+        "bookId": 1,
+        "bookName": "Words of Radiance",
+        "bookSeries": "Stormlight Archive",
+        "releaseDate": "March 19, 2011",
+        "wordCount": 110000,
+        "coverURL": "src/assets/images/WordsOfRadiance.jpeg"
+    }
+]

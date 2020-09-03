@@ -1,1 +1,24 @@
-<p>books works!</p>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Series</th>
+        <th scope="col">Release Date</th>
+        <th scope="col">Word Count</th>
+        <th scope="col">Cover</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.bookName }}</td>
+          <td>{{ book.bookSeries }}</td>
+          <td>{{ book.releaseDate }}</td>
+          <td>{{ book.wordCount }}</td>
+          <!--td>
+              <img [src]='book.coverURL'>
+          </td-->
+      </tr>
+    </tbody>
+</table>
