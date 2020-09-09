@@ -1,18 +1,62 @@
 [
-    {
-      "bookId": 1,
-      "bookName": "The Way of Kings",
+  {
+    "bookId": 1,
+    "bookAuthor": "Brandon Sanderson",
+    "bookName": "The Way of Kings",
+    "bookSeries": "Stormlight Archive",
+    "releaseDate": "August 31, 2010",
+    "genre": "High Fantasy",
+    "wordCount": 398460,
+    "coverURL": "assets/images/TheWayOfKings.jpeg"
+  },
+  {
+      "bookId": 2,
+      "bookAuthor": "Brandon Sanderson",
+      "bookName": "Words of Radiance",
       "bookSeries": "Stormlight Archive",
-      "releaseDate": "March 19, 2010",
-      "wordCount": 100000,
-      "coverURL": "src/assets/images/TheWayOfKings.jpeg"
-    },
-    {
-        "bookId": 1,
-        "bookName": "Words of Radiance",
-        "bookSeries": "Stormlight Archive",
-        "releaseDate": "March 19, 2011",
-        "wordCount": 110000,
-        "coverURL": "src/assets/images/WordsOfRadiance.jpeg"
-    }
+      "releaseDate": "March 4, 2014",
+      "genre": "High Fantasy",
+      "wordCount": 419485,
+      "coverURL": "assets/images/WordsOfRadiance.jpeg"
+  },
+  {
+    "bookId": 3,
+    "bookAuthor": "Robert Jordan",
+    "bookName": "The Eye of the World",
+    "bookSeries": "Wheel of Time",
+    "releaseDate": "January 15, 1990",
+    "genre": "High Fantasy",
+    "wordCount": 260565,
+    "coverURL": "assets/images/TheEyeOfTheWorld.jpg"
+  },
+  {
+    "bookId": 4,
+    "bookAuthor": "John Steinbeck",
+    "bookName": "Of Mice And Men",
+    "bookSeries": "N/A",
+    "releaseDate": "1937",
+    "genre": "Social Realism",
+    "wordCount": 31465,
+    "coverURL": "assets/images/OfMiceAndMen.jpg"
+  },
+  {
+    "bookId": 5,
+    "bookAuthor": "Alexandre Dumas",
+    "bookName": "The Count of Monte Cristo",
+    "bookSeries": "N/A",
+    "releaseDate": "1844-1846",
+    "genre": "Historical Adventure",
+    "wordCount": 260565,
+    "coverURL": "assets/images/TheCountOfMonteCristo.jpeg"
+  },
+  {
+    "bookId": 6,
+    "bookAuthor": "Polybius",
+    "bookName": "The Histories",
+    "bookSeries": "N/A",
+    "releaseDate": "unkown, Sometime after 167 B.C.E.",
+    "genre": "Nonfiction History",
+    "wordCount": null,
+    "coverURL": "n/a"
+  }
 ]

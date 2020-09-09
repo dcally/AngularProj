@@ -5,4 +5,7 @@ export interface IBooks {
     releaseDate: string;
     wordCount: number;
     coverURL: string;
+    mediaType: string;
+    genre: string;
+    bookAuthor: string;
 }
