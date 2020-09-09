@@ -13,6 +13,14 @@ export class BooksComponent implements OnInit {
   constructor(private booksService: BooksService) { }
 
   books: IBooks[] = [];
+  filterCover = true;
+  filterTitle = true;
+  filterSeries = false;
+  filterReleaseDate = true;
+  filterId = true;
+  filterWordCount = false;
+  filterAuthor = true;
+  filterGenre = true;
 
   ngOnInit(): void {
     this.booksService.getBooks().subscribe({
@@ -21,5 +29,28 @@ export class BooksComponent implements OnInit {
       },
     });
   }
-
+  toggleCover() {
+    this.filterCover = !this.filterCover;
+  }
+  toggleTitle() {
+    this.filterTitle = !this.filterTitle;
+  }
+  toggleSeries() {
+    this.filterSeries = !this.filterSeries;
+  }
+  toggleReleaseDate() {
+    this.filterReleaseDate = !this.filterReleaseDate;
+  }
+  toggleId() {
+    this.filterId = !this.filterId;
+  }
+  toggleWordCount() {
+    this.filterWordCount = !this.filterWordCount;
+  }
+  toggleAuthor() {
+    this.filterAuthor = !this.filterAuthor;
+  }
+  toggleGenre() {
+    this.filterGenre = !this.filterGenre;
+  }
 }

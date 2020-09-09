@@ -1,24 +1,84 @@
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">Series</th>
-        <th scope="col">Release Date</th>
-        <th scope="col">Word Count</th>
-        <th scope="col">Cover</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let book of books">
-          <td>{{ book.id }}</td>
-          <td>{{ book.bookName }}</td>
-          <td>{{ book.bookSeries }}</td>
-          <td>{{ book.releaseDate }}</td>
-          <td>{{ book.wordCount }}</td>
-          <!--td>
-              <img [src]='book.coverURL'>
-          </td-->
-      </tr>
-    </tbody>
-</table>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterId ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleId()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  ID
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterTitle ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleTitle()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Title
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterAuthor ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleAuthor()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Author
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterSeries ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleSeries()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Series
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterGenre ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleGenre()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Genre
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterReleaseDate ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleReleaseDate()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Release Date
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterWordCount ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleWordCount()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Word Count
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked="{{ filterCover ? 'checked' : '' }}" id="defaultCheck1" (click)='toggleCover()'>
+                <label class="form-check-label" for="defaultCheck1">
+                  Cover
+                </label>
+              </div>
+        </div>
+      </div>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col" *ngIf="filterId">Id</th>
+            <th scope="col" *ngIf="filterTitle">Title</th>
+            <th scope="col" *ngIf="filterAuthor">Author</th>
+            <th scope="col" *ngIf="filterSeries">Series</th>
+            <th scope="col" *ngIf="filterGenre">Genre</th>
+            <th scope="col" *ngIf="filterReleaseDate">Release Date</th>
+            <th scope="col" *ngIf="filterWordCount">Word Count</th>
+            <th scope="col" *ngIf="filterCover">Cover</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let book of books">
+            <td *ngIf="filterId">{{ book.bookId }}</td>
+            <td *ngIf="filterTitle">{{ book.bookName }}</td>
+            <td *ngIf="filterAuthor">{{ book.bookAuthor }}</td>
+            <td *ngIf="filterSeries">{{ book.bookSeries }}</td>
+            <td *ngIf="filterGenre">{{ book.genre }}</td>
+            <td *ngIf="filterReleaseDate">{{ book.releaseDate }}</td>
+            <td *ngIf="filterWordCount">{{ book.wordCount }}</td>
+            <td>
+                  <img *ngIf="filterCover" width=50px height=75px [src]='book.coverURL'>
+              </td>
+        </tr>
+        </tbody>
+    </table>
